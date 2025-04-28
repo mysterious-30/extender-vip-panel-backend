@@ -1,0 +1,17 @@
+model ApiKey {
+  id        String   @id @default(uuid())
+  name      String
+  key       String   @unique
+  status    String   @default("active")
+  createdAt DateTime @default(now())
+  userId    String
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([userId])
+}
+
+// Make sure this is in your User model
+model User {
+  // ... other fields
+  apiKeys ApiKey[]
+}

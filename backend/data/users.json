@@ -1,0 +1,29 @@
+[
+  {
+    "id": "owner1",
+    "userId": "owner",
+    "password": "owner123",
+    "name": "Owner User",
+    "role": "owner",
+    "balance": 960,
+    "expiryDate": null
+  },
+  {
+    "id": "admin1",
+    "userId": "admin",
+    "password": "admin123",
+    "name": "Admin User",
+    "role": "admin",
+    "balance": 500,
+    "expiryDate": null
+  },
+  {
+    "id": "user1",
+    "userId": "user",
+    "password": "user123",
+    "name": "Regular User",
+    "role": "user",
+    "balance": 100,
+    "expiryDate": "2025-05-01T19:25:19.032Z"
+  }
+]
