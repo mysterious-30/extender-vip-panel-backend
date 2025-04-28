@@ -129,8 +129,17 @@ app.use((req, res, next) => {
 });
 
 // Test endpoint to verify server is running
-app.get('/api/health', (req, res) => {
-  res.json({ status: 'ok', message: 'Backend server is running' });
+app.get('/api/health', async (req, res) => {
+  try {
+    const healthStatus = await getHealthStatus();
+    res.json(healthStatus);
+  } catch (error) {
+    res.status(500).json({
+      status: 'error',
+      message: 'Failed to get health status',
+      error: error.message
+    });
+  }
 });
 
 // Register API routes

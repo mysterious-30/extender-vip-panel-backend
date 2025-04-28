@@ -14,7 +14,9 @@
     "logs": "node scripts/view-logs.js",
     "logs:errors": "node scripts/view-logs.js --level=error",
     "logs:mongodb": "node scripts/view-logs.js --mongodb",
-    "logs:client": "node scripts/view-logs.js --source=client"
+    "logs:client": "node scripts/view-logs.js --source=client",
+    "deploy:check": "node scripts/deploy.js",
+    "deploy": "npm run deploy:check && npm run build"
   },
   "dependencies": {
     "bcrypt": "^5.1.1",
